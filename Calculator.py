@@ -1,18 +1,19 @@
+# imports
 import math
 
 # define functions
-def addition(x,y):
-    return x+y
-def subtraction(x,y):
-    return x-y
-def multiplication(x,y):
-    return x*y
-def division(x,y):
-    return x/y
-def second_Power(x):
-    return x**2
-def square_root(x):
-    return math.sqrt(x)
+def addition(num1,num2):
+    return num1+num2
+def subtraction(num1,num2):
+    return num1-num2
+def multiplication(num1,num2):
+    return num1*num2
+def division(num1,num2):
+    return num1/num2
+def second_Power(enteredNumber):
+    return enteredNumber**2
+def square_root(enteredNumber):
+    return math.sqrt(enteredNumber)
 
 # Options for users to choose from
 print("1. Addition")
@@ -29,7 +30,7 @@ while True:
     # user input number
     choice=input("choose operation: ")
    
-    # stop and exit programe
+    # stop and exit program
     if choice == '7':
         print("Goodbye!")
         break
@@ -58,12 +59,12 @@ while True:
         num2=int((input("enter second number: ")))
         print(num1, "/", num2, "=", division(num1, num2))
     
-    # second_Power
-    elif choice =='5':
+    # second_power
+    if choice =='5':
         num3 = int(input("enter number: "))
-        print(num3,"** 2=",second_Power(num3))
+        print(str(num3)+"^2 =",second_Power(num3))
     
     # square_root
-    elif choice =='6':
+    if choice =='6':
         num3 = int(input("enter number: "))
         print("√",num3,"=",math.sqrt(num3))
